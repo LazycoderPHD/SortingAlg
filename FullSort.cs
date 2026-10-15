@@ -11,32 +11,48 @@ namespace SortingProject
             Console.Write("Nhập số lượng phần tử n: ");
             int n = int.Parse(Console.ReadLine());
 
-            int[] originalArray = new int[n];
+            int[] a = new int[n];
             for (int i = 0; i < n; i++)
             {
                 Console.Write($"Nhập phần tử a[{i}]: ");
-                originalArray[i] = int.Parse(Console.ReadLine());
+                a[i] = int.Parse(Console.ReadLine());
             }
 
-            Console.Write($"\nMảng ban đầu: ");
-            PrintArray(originalArray);
+            Console.Write($"Mảng ban đầu: ");
+            PrintArray(a);
 
-            int[] arr1 = (int[])originalArray.Clone();
+            int[] arr1 = new int[n];
+            for (int i = 0; i < n; i++)
+            {
+                arr1[i] = a[i];
+            }
             BubbleSorter.bubblesort(arr1);
             Console.Write($"Bubble Sort:    ");
             PrintArray(arr1);
 
-            int[] arr2 = (int[])originalArray.Clone();
+            int[] arr2 = new int[n];
+            for (int i = 0; i < n; i++)
+            {
+                arr2[i] = a[i];
+            }
             InterchangeSorter.interchangesort(arr2);
             Console.Write($"Interchange:    ");
             PrintArray(arr2);
 
-            int[] arr3 = (int[])originalArray.Clone();
+            int[] arr3 = new int[n];
+            for (int i = 0; i < n; i++)
+            {
+                arr3[i] = a[i];
+            }
             SelectionSorter.selectionsort(arr3);
             Console.Write($"Selection Sort: ");
             PrintArray(arr3);
 
-            int[] arr4 = (int[])originalArray.Clone();
+            int[] arr4 = new int[n];
+            for (int i = 0; i < n; i++)
+            {
+                arr4[i] = a[i];
+            }
             InsertionSorter.insertionsort(arr4);
             Console.Write($"Insertion Sort: ");
             PrintArray(arr4);
